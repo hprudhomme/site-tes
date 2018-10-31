@@ -1,0 +1,93 @@
+/* fond jaune #ffb32f
+C de lucie #c81b84
+vert de back-end et du tableau  #00c2a7
+rose du footer #c81b84 */
+
+
+/* margin = ajoute des espaces externes à l'élément 
+  padding = ajoute des espaces internes à l'élément 
+
+  exemples d'usage des propriétés CSS liées au box-model : 
+  margin-top: 100px;  crée un espace de 100px au dessus du #container
+  border-top: 5px solid black; crée une bordure noire de 5px
+*/
+
+
+/* styles génériques de la page */
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    /* fond de couleur */
+    background-color: #ffb32f;
+}
+
+
+/* mise en page */
+
+#container {
+    background-color: white;
+    /* Les éléments BLOC (div, h*, p...) prennent par défaut toute la largeur disponible (celle de leur parent) 
+  on peut fixer explicitement leur largeur avec width : */
+    width: 650px;
+    /* pour centrer facilement ce bloc dans le parent */
+    margin: auto;
+    /* le padding permettra de faire "respirer" le contenu dans la page
+    15 (haut et b as) 20 (gauche et droite) */
+    padding: 15px 20px;
+}
+
+
+/* typos */
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+h2 {
+    /* autre usage du box-model : attribuer une bordure à un élément */
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #c81b84;
+    /* équivalent raccourci : 
+    border-bottom: 1px solid #c81b84; */
+}
+
+
+/* grosses lettres roses */
+
+
+/* #bigletter {} OU */
+
+
+/* h1 span {}
+sélecteur descendant : 
+"tous les span qui sont DANS un h1 <=> span qui sont des descendants de H1" 
+attention, différent de cibler un ID car il peut y avoir plusieurs span dans cette situation dans la page (et alors ils seront gros et rose) */
+
+
+/* cibler la classe (.) bigletter : TOUS les éléments portant la classe bigletter ser */
+
+#spanspecial {
+    color: blue;
+}
+
+.bigletter {
+    font-size: 1.4em;
+    color: #c81b84;
+}
+
+
+/* style du footer */
+
+footer {
+    background-color: #c81b84;
+    /* "hack" de la margin négative pour se superposer au padding du #container */
+    margin: 50px -20px -15px;
+    /* le padding, c'est pour faire respirer le texte à l'intérieur */
+    padding: 12px 24px;
+    color: white;
+}
